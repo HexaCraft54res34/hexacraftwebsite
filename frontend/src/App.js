@@ -26,6 +26,7 @@ function App() {
     <BrowserRouter>
       <div className="min-h-screen bg-background text-foreground relative">
         <div className="noise-overlay" />
+        <ScrollToTop />
         <Navbar />
         <main className="relative z-10">
           <Routes>
