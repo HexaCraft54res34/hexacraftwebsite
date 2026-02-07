@@ -55,7 +55,7 @@ function PlanCard({ plan, specs, tier, index }) {
           <span className="text-foreground">Pterodactyl Panel</span>
         </div>
       </div>
-      <a href="https://discord.gg/hexacraft" target="_blank" rel="noopener noreferrer">
+      <a href="https://discord.com/invite/RDPCm2vt3B" target="_blank" rel="noopener noreferrer">
         <Button
           data-testid={`select-plan-${plan.name.toLowerCase().replace(/\s+/g, "-")}`}
           className={`w-full font-bold uppercase tracking-wider text-xs ${
