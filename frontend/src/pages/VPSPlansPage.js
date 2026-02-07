@@ -89,7 +89,7 @@ function VPSCard({ plan, index }) {
       </div>
 
       <div className="mt-auto">
-        <a href="https://discord.gg/hexacraft" target="_blank" rel="noopener noreferrer">
+        <a href="https://discord.com/invite/RDPCm2vt3B" target="_blank" rel="noopener noreferrer">
           <Button
             data-testid={`buy-vps-${plan.name.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
             className={`w-full font-bold uppercase tracking-wider text-xs ${
