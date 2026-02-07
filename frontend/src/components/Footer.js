@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Hexagon } from "lucide-react";
+import { motion } from "framer-motion";
 
 const FOOTER_LINKS = {
   Hosting: [
@@ -20,14 +20,19 @@ const FOOTER_LINKS = {
   ],
 };
 
+const fadeUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i = 0) => ({ opacity: 1, y: 0, transition: { delay: i * 0.1, duration: 0.5 } }),
+};
+
 export default function Footer() {
   return (
     <footer data-testid="footer" className="border-t border-white/5 bg-[#030305]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          <div>
-            <Link to="/" className="flex items-center gap-2 mb-4">
-              <Hexagon className="w-7 h-7 text-primary" />
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
+            <Link to="/" className="flex items-center gap-2.5 mb-4">
+              <img src="/logo.png" alt="HexaCraft" className="w-8 h-8 rounded-lg" />
               <span className="font-heading text-lg font-bold tracking-wider text-white">
                 HEXA<span className="text-primary">CRAFT</span>
               </span>
@@ -35,10 +40,10 @@ export default function Footer() {
             <p className="text-sm text-muted-foreground leading-relaxed">
               Premium Minecraft hosting powered by enterprise-grade hardware, NVMe storage, and advanced DDoS protection.
             </p>
-          </div>
+          </motion.div>
 
-          {Object.entries(FOOTER_LINKS).map(([category, links]) => (
-            <div key={category}>
+          {Object.entries(FOOTER_LINKS).map(([category, links], ci) => (
+            <motion.div key={category} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={ci + 1}>
               <h4 className="font-heading text-sm font-semibold tracking-widest uppercase text-primary mb-4">
                 {category}
               </h4>
@@ -55,7 +60,7 @@ export default function Footer() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
           ))}
         </div>
 
