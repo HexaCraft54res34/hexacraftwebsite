@@ -39,6 +39,7 @@ function AnimatedRoutes() {
           <Route path="/what-we-do" element={<WhatWeDoPage />} />
           <Route path="/who-its-for" element={<WhoItsForPage />} />
           <Route path="/plans" element={<MinecraftPlansPage />} />
+          <Route path="/vps" element={<VPSPlansPage />} />
           <Route path="/calculator" element={<PlanCalculatorPage />} />
           <Route path="/pterodactyl" element={<PterodactylFeaturesPage />} />
           <Route path="/ddos-protection" element={<DDoSProtectionPage />} />
