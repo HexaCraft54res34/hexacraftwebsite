@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 const FOOTER_LINKS = {
   Hosting: [
     { label: "Minecraft Plans", to: "/plans" },
+    { label: "VPS Plans", to: "/vps" },
     { label: "Plan Calculator", to: "/calculator" },
     { label: "Pterodactyl Panel", to: "/pterodactyl" },
     { label: "DDoS Protection", to: "/ddos-protection" },
