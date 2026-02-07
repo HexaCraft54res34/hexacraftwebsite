@@ -1,0 +1,113 @@
+{
+  "project_name": "HexaCraft",
+  "design_philosophy": {
+    "theme": "Dark Mode Gaming",
+    "mood": "Futuristic, Robust, High-Performance, 'Cyber-Minecraft'",
+    "core_principles": [
+      "No Generic SaaS Gradients (Avoid Purple/Teal smooth gradients)",
+      "Hexagonal & Geometric Shapes",
+      "Neon Glows on Interaction",
+      "High Contrast Text",
+      "Performance First (Fast animations)"
+    ]
+  },
+  "typography": {
+    "font_family": {
+      "headings": "Oxanium, display, sans-serif",
+      "body": "Outfit, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "scale": {
+      "h1": "text-5xl md:text-7xl font-bold tracking-tight uppercase",
+      "h2": "text-4xl md:text-5xl font-bold tracking-tight",
+      "h3": "text-2xl md:text-3xl font-semibold",
+      "body": "text-base md:text-lg leading-relaxed text-muted-foreground",
+      "caption": "text-sm font-mono tracking-widest uppercase text-cyan-400"
+    },
+    "instructions": "Import fonts via Google Fonts in index.css. Use Oxanium for all headings to give that 'gaming/tech' feel. Use Outfit for readability."
+  },
+  "colors": {
+    "palette": {
+      "background": "#050505",
+      "foreground": "#E0E6ED",
+      "card": "#0A0F14",
+      "card_foreground": "#FFFFFF",
+      "primary": "#00F0FF",
+      "primary_foreground": "#000000",
+      "secondary": "#0F172A",
+      "secondary_foreground": "#FFFFFF",
+      "accent": "#00F0FF",
+      "accent_foreground": "#000000",
+      "border": "#1E293B",
+      "ring": "#00F0FF",
+      "destructive": "#FF0055"
+    },
+    "gradients": {
+      "hero_glow": "radial-gradient(circle at center, rgba(0, 240, 255, 0.15) 0%, rgba(5, 5, 5, 0) 70%)",
+      "card_hover": "linear-gradient(45deg, rgba(0, 240, 255, 0.1), transparent 40%)"
+    },
+    "rules": "Background must be #050505 (Void Black). Use Cyan (#00F0FF) for all primary actions and glows. Avoid generic purple."
+  },
+  "components": {
+    "buttons": {
+      "style": "cut-corners",
+      "default": "bg-primary text-black font-bold uppercase tracking-widest px-8 py-3 hover:shadow-[0_0_20px_rgba(0,240,255,0.5)] transition-all clip-path-polygon-[0_0,100%_0,100%_70%,85%_100%,0_100%]",
+      "outline": "border border-primary text-primary hover:bg-primary/10 uppercase tracking-widest px-8 py-3 transition-all"
+    },
+    "cards": {
+      "style": "glass-panel",
+      "classes": "bg-card/50 backdrop-blur-md border border-white/5 hover:border-primary/50 transition-colors duration-300 relative overflow-hidden group"
+    },
+    "inputs": {
+      "style": "solid-underline",
+      "classes": "bg-secondary/50 border-b-2 border-white/10 focus:border-primary focus:outline-none px-4 py-3 rounded-none transition-colors placeholder:text-white/20"
+    }
+  },
+  "layout": {
+    "grid_system": "Bento Grid (See specific modes in persona)",
+    "spacing": "Relaxed. Use gap-8 or gap-12 for section separation.",
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+  },
+  "visual_enhancers": {
+    "shadows": {
+      "glow": "0 0 20px rgba(0, 240, 255, 0.3)",
+      "neon_text": "0 0 10px rgba(0, 240, 255, 0.5)"
+    },
+    "borders": "1px solid rgba(255, 255, 255, 0.1)",
+    "textures": "Use a subtle noise overlay on the background if possible (opacity 0.03)."
+  },
+  "media": {
+    "image_urls": {
+      "hero_bg": "https://images.pexels.com/photos/36040448/pexels-photo-36040448.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "server_rack": "https://images.pexels.com/photos/17489157/pexels-photo-17489157.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "ddos_shield": "https://images.unsplash.com/photo-1696013910376-c56f76dd8178?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTN8MHwxfHNlYXJjaHwyfHxmdXR1cmlzdGljJTIwY3liZXIlMjBzZWN1cml0eSUyMGJsdWUlMjBsb2NrfGVufDB8fHx8MTc3MDQ2MTk0OHww&ixlib=rb-4.1.0&q=85",
+      "gaming_setup": "https://images.unsplash.com/photo-1609334004539-c029d338f889?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjd8MHwxfHNlYXJjaHwzfHxnYW1pbmclMjBkYXNoYm9hcmQlMjB1aSUyMGludGVyZmFjZSUyMGRhcmslMjBtb2RlJTIwZnV0dXJpc3RpY3xlbnwwfHx8fDE3NzA0NjE5NDB8MA&ixlib=rb-4.1.0&q=85"
+    },
+    "icons": "Lucide React (Shield, Zap, Server, Globe, Cpu, MemoryStick, Users, MessageSquare, ChevronRight, Menu, X)"
+  },
+  "animations": {
+    "library": "framer-motion",
+    "preferences": {
+      "reduced_motion": "respect-user-settings",
+      "style": "snappy"
+    }
+  },
+  "instructions_to_main_agent": [
+    "INSTALL FONTS: Add @import for Oxanium (400-800) and Outfit (300-700) in index.css immediately.",
+    "TAILWIND CONFIG: Update tailwind.config.js with the colors provided above. Ensure 'primary' is #00F0FF.",
+    "HERO SECTION: Use the 'hero_bg' as a subtle background with a heavy dark overlay (90% opacity). The focus should be on typography and a 3D-style CSS element or glowing grid.",
+    "PRICING CARDS: These are the most important. Make them 'Holo-cards'. Glass background, 1px white/10 border. On hover: border becomes Cyan, shadow glows.",
+    "CALCULATOR: Build a functional React component with sliders for RAM and Slots. Display price in INR (₹). Logic: ₹150/GB approx.",
+    "ICONS: Use Lucide-react. Do not use emojis.",
+    "NO PURPLE: If you feel like adding purple, add Deep Indigo (#0F172A) instead. Keep the 'Neon' strictly Cyan.",
+    "TEST IDS: Add data-testid to all buttons and inputs."
+  ],
+  "UNIVERSAL_GUIDELINES": [
+    "Don't make generic centered layouts.",
+    "Create depth through layered design elements.",
+    "Use glass-morphism effects with backdrop filters.",
+    "Every interaction needs micro-animations.",
+    "Use 2-3x more spacing than feels comfortable.",
+    "Subtle grain textures/noise overlays."
+  ]
+}
