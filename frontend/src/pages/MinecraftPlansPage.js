@@ -134,6 +134,7 @@ export default function MinecraftPlansPage() {
                 Performance Plans
               </TabsTrigger>
             </TabsList>
+            </div>
 
             <TabsContent value="budget">
               <SpecsBar specs={budgetSpecs} />
