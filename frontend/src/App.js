@@ -15,6 +15,7 @@ import FAQPage from "./pages/FAQPage";
 import RefundPolicyPage from "./pages/RefundPolicyPage";
 import TermsConditionsPage from "./pages/TermsConditionsPage";
 import ContactPage from "./pages/ContactPage";
+import VPSPlansPage from "./pages/VPSPlansPage";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
