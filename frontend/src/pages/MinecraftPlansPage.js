@@ -85,30 +85,46 @@ export default function MinecraftPlansPage() {
   const perfSpecs = plansData?.performance?.specs || {};
 
   return (
-    <div className="pt-24 pb-16">
-      <section className="relative py-20 overflow-hidden">
-        <div className="hero-glow absolute inset-0" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <motion.p initial="hidden" animate="visible" variants={fadeUp}
-            className="font-mono text-sm tracking-[0.3em] uppercase text-primary mb-4">
-            Pricing
-          </motion.p>
+    <div className="pt-20 pb-16">
+      {/* Hero with background */}
+      <section className="relative py-24 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?auto=format&fit=crop&w=2000&q=80"
+            alt=""
+            className="w-full h-full object-cover opacity-25"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#050505]/60 via-[#050505]/80 to-[#050505]" />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <motion.h1 initial="hidden" animate="visible" variants={fadeUp} custom={1}
             data-testid="plans-heading"
-            className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white">
-            Minecraft <span className="text-primary">Hosting Plans</span>
+            className="font-heading text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-white">
+            Minecraft <span className="text-primary">Hosting</span>
           </motion.h1>
           <motion.p initial="hidden" animate="visible" variants={fadeUp} custom={2}
-            className="mt-6 text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed">
-            Choose between Budget and Performance tiers. All plans include DDoS protection, Pterodactyl panel, and instant setup.
+            className="mt-5 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            Premium Minecraft server hosting with DDoS protection, Pterodactyl panel, and instant setup
           </motion.p>
+          <motion.p initial="hidden" animate="visible" variants={fadeUp} custom={3}
+            className="mt-4 text-white font-heading text-lg">
+            Starting at <span className="font-bold text-primary text-2xl">₹20</span>/month
+          </motion.p>
+          <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={4} className="mt-8">
+            <a href="#plans">
+              <Button data-testid="mc-view-plans-btn" className="bg-primary text-black font-bold uppercase tracking-widest px-8 py-6 text-sm hover:shadow-[0_0_25px_rgba(0,240,255,0.5)] transition-all">
+                View Plans <ChevronRight className="w-4 h-4 ml-1" />
+              </Button>
+            </a>
+          </motion.div>
         </div>
       </section>
 
-      <section className="py-12">
+      <section className="py-12" id="plans">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Tabs defaultValue="budget" className="w-full">
-            <TabsList className="bg-secondary/50 border border-white/5 p-1 mb-12" data-testid="plans-tab-list">
+            <div className="flex justify-center mb-12">
+            <TabsList className="bg-secondary/50 border border-white/5 p-1" data-testid="plans-tab-list">
               <TabsTrigger value="budget" data-testid="tab-budget"
                 className="data-[state=active]:bg-primary data-[state=active]:text-black font-heading uppercase tracking-wider text-sm px-6">
                 Budget Plans
