@@ -109,23 +109,49 @@ function VPSCard({ plan, index }) {
 
 export default function VPSPlansPage() {
   return (
-    <div className="pt-24 pb-16">
-      <section className="relative py-20 overflow-hidden">
-        <div className="hero-glow absolute inset-0" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <motion.p initial="hidden" animate="visible" variants={fadeUp}
-            className="font-mono text-sm tracking-[0.3em] uppercase text-primary mb-4">
-            VPS Hosting
-          </motion.p>
+    <div className="pt-20 pb-16">
+      {/* Hero with background image */}
+      <section className="relative py-24 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=2000&q=80"
+            alt=""
+            className="w-full h-full object-cover opacity-30"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#050505]/60 via-[#050505]/80 to-[#050505]" />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <motion.h1 initial="hidden" animate="visible" variants={fadeUp} custom={1}
             data-testid="vps-heading"
-            className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white">
-            VPS <span className="text-primary">Hosting Plans</span>
+            className="font-heading text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-white">
+            VPS <span className="text-primary">Hosting</span>
           </motion.h1>
           <motion.p initial="hidden" animate="visible" variants={fadeUp} custom={2}
-            className="mt-6 text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed">
-            DDoS-protected VPS solutions with full root access, unmetered bandwidth, and enterprise-grade hardware. Hosted in Noida, India.
+            className="mt-5 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            High-performance VPS hosting with full root access and instant deployment
           </motion.p>
+          <motion.p initial="hidden" animate="visible" variants={fadeUp} custom={3}
+            className="mt-4 text-white font-heading text-lg">
+            Starting at <span className="font-bold text-primary text-2xl">₹199</span>/month
+          </motion.p>
+          <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={4} className="mt-8">
+            <a href="#plans">
+              <Button data-testid="vps-view-plans-btn" className="bg-primary text-black font-bold uppercase tracking-widest px-8 py-6 text-sm hover:shadow-[0_0_25px_rgba(0,240,255,0.5)] transition-all">
+                View Plans <ChevronRight className="w-4 h-4 ml-1" />
+              </Button>
+            </a>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Location Section */}
+      <section className="py-12 border-b border-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="font-mono text-sm tracking-[0.2em] uppercase text-muted-foreground mb-4">Location</p>
+          <div className="inline-flex items-center gap-1 bg-secondary/40 border border-white/10 rounded-full p-1">
+            <span className="bg-primary text-black font-bold text-sm px-5 py-2 rounded-full">India <span className="font-mono text-xs opacity-70">(Low Latency)</span></span>
+          </div>
+          <p className="text-xs text-muted-foreground mt-3">Hosted in Noida, IN Datacenter</p>
         </div>
       </section>
 
