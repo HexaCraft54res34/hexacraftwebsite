@@ -69,7 +69,7 @@ export default function ContactPage() {
                 </div>
                 <h3 className="font-heading text-base font-semibold text-white mb-1">Discord Support</h3>
                 <p className="text-sm text-muted-foreground mb-3">Fastest way to get help from our team.</p>
-                <a href="https://discord.gg/hexacraft" target="_blank" rel="noopener noreferrer"
+                <a href="https://discord.com/invite/RDPCm2vt3B" target="_blank" rel="noopener noreferrer"
                   data-testid="discord-link"
                   className="text-sm text-primary hover:underline font-mono">
                   discord.gg/hexacraft
