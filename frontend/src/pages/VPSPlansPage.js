@@ -155,7 +155,7 @@ export default function VPSPlansPage() {
         </div>
       </section>
 
-      <section className="py-12">
+      <section className="py-12" id="plans">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Tabs defaultValue="xeon" className="w-full">
             <div className="flex justify-center mb-12">
